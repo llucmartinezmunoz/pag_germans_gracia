@@ -1,0 +1,3181 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xarcuteria Germans Gràcia - Des de 1960 | Barcelona</title>
+  <meta name="description" content="Xarcuteria tradicional i artesania gastronòmica a Barcelona des de 1960. Pernils ibèrics de gla tallats a mà, embotits artesans, formatges de pagès i encàrrecs per WhatsApp.">
+  <meta property="og:title" content="Xarcuteria Germans Gràcia - Des de 1960 | Barcelona">
+  <meta property="og:description" content="Pernils ibèrics tallats a mà, embotits artesans, formatges de pagès i encàrrecs per WhatsApp a Gràcia, Eixample, Ciutat Vella i Sant Andreu.">
+  <meta property="og:image" content="/assets/aistudio/imatge_34460d3d.png">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Playfair Display, Inter & Lora -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /* ==========================================================================
+       VARIABLES I DISSENY CROMÀTIC (ADAPTAT AL VERD CORPORATIU DEL LOGO GERMANS GRÀCIA)
+       ========================================================================== */
+    :root {
+      /* Verd del logotip oficial Germans Gràcia */
+      --color-brand-green: #76B819;         /* Verd viu i característic del logo */
+      --color-brand-green-hover: #67a315;
+      --color-brand-green-dark: #3F670B;    /* Verd fosc per a text sobre clar i contrast */
+      --color-brand-green-deep: #1A3008;    /* Fons fosc amb matís noble */
+      --color-brand-green-light: #F0F8E3;   /* Fons suau verdós per a targetes i avisos */
+
+      /* Accents de xarcuteria noble */
+      --color-primary: #7B1113;             /* Bordeus Pernil Ibèric / Vi de la terra */
+      --color-primary-dark: #580c0d;
+      --color-wood: #352115;                /* Fusta fosca de taulell artesà */
+      --color-wood-light: #523422;
+      --color-bg: #FAF7F2;                  /* Crema artesà càlid de fons */
+      --color-bg-card: #FFFFFF;
+      --color-bg-alt: #F4ECE0;              /* Fons càlid secundari */
+      --color-accent-gold: #C5A059;         /* Daurat subtil de prestigi des de 1960 */
+      --color-accent-gold-light: #e6c88b;
+      --color-text: #241E1C;                /* Cafè molt fosc d'alta llegibilitat */
+      --color-text-muted: #64564E;
+      --color-border: #E5DCD0;
+      --color-border-dark: #C7BBAE;
+      --color-success: #528A10;             /* Indicador obert */
+      --color-danger: #C62828;              /* Indicador tancat */
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 2px 6px rgba(44, 34, 30, 0.05);
+      --shadow-md: 0 6px 18px rgba(44, 34, 30, 0.08);
+      --shadow-lg: 0 12px 30px rgba(44, 34, 30, 0.12);
+      --transition-smooth: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Reset i tipografia */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      position: relative;
+    }
+
+    /* Subtil fons de rajol hidràulic tradicional de Barcelona */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+      opacity: 0.025;
+      background-image: radial-gradient(var(--color-brand-green-dark) 1px, transparent 1px), radial-gradient(var(--color-primary) 1px, var(--color-bg) 1px);
+      background-size: 32px 32px;
+      background-position: 0 0, 16px 16px;
+    }
+
+    h1, h2, h3, h4, .font-serif {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--color-wood);
+      text-wrap: balance;
+    }
+
+    .font-sub {
+      font-family: 'Lora', Georgia, serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* ==========================================================================
+       BARRA SUPERIOR D'ESTAT I CAPÇALERA
+       ========================================================================== */
+    .top-status-bar {
+      background: var(--color-brand-green-deep);
+      color: #F7F4EF;
+      font-size: 0.8125rem;
+      border-bottom: 2px solid var(--color-brand-green);
+      padding: 0.45rem 1rem;
+      position: relative;
+      z-index: 100;
+    }
+
+    .top-status-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      transition: var(--transition-smooth);
+    }
+
+    .status-badge.open {
+      background: rgba(118, 184, 25, 0.25);
+      color: #bbf075;
+      border: 1px solid rgba(187, 240, 117, 0.5);
+    }
+
+    .status-badge.closed {
+      background: rgba(198, 40, 40, 0.25);
+      color: #ff9e9e;
+      border: 1px solid rgba(255, 158, 158, 0.4);
+    }
+
+    .status-indicator-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .status-badge.open .status-indicator-dot {
+      background-color: var(--color-brand-green);
+      box-shadow: 0 0 6px var(--color-brand-green);
+    }
+
+    .status-badge.closed .status-indicator-dot {
+      background-color: #f87171;
+    }
+
+    .top-info-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .top-info-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: #e5dacd;
+      transition: var(--transition-smooth);
+    }
+
+    .top-info-item:hover {
+      color: var(--color-brand-green);
+    }
+
+    /* Selector d'idioma CAT | ES */
+    .lang-switcher {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--color-brand-green);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: #d1c7bc;
+      padding: 0.2rem 0.55rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .lang-btn.active {
+      background: var(--color-brand-green);
+      color: #122304;
+      font-weight: 700;
+    }
+
+    /* Capçalera Principal */
+    header.site-header {
+      background: var(--color-bg);
+      border-bottom: 2px solid var(--color-border);
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-smooth);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      gap: 1.5rem;
+    }
+
+    /* Grup del logotip oficial al principi de tot */
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+    }
+
+    .brand-logo-img {
+      width: 48px;
+      height: 48px;
+      border-radius: 6px;
+      object-fit: contain;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      border: 2px solid var(--color-brand-green);
+      flex-shrink: 0;
+      background: #76B819;
+      transition: transform 0.2s ease;
+    }
+
+    .brand-group:hover .brand-logo-img {
+      transform: scale(1.05);
+    }
+
+    .brand-text-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.45rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      color: var(--color-wood);
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .brand-subtitle {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--color-brand-green-dark);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 0.15rem;
+    }
+
+    /* Menú de navegació */
+    nav.main-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .nav-link {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--color-text);
+      position: relative;
+      padding: 0.25rem 0;
+      transition: var(--transition-smooth);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-link:hover {
+      color: var(--color-brand-green-dark);
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--color-brand-green);
+      transition: width 0.2s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .btn-header-order {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--color-brand-green);
+      color: #122304;
+      padding: 0.55rem 1.15rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.875rem;
+      font-weight: 700;
+      border: 1px solid var(--color-brand-green-dark);
+      box-shadow: 0 2px 6px rgba(118, 184, 25, 0.35);
+      transition: var(--transition-smooth);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-header-order:hover {
+      background: var(--color-brand-green-hover);
+      transform: translateY(-1px);
+    }
+
+    .cart-indicator {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background: var(--color-bg-alt);
+      border: 1px solid var(--color-border);
+      color: var(--color-wood);
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .cart-indicator:hover {
+      background: #e6dac8;
+      color: var(--color-primary);
+    }
+
+    .cart-badge-count {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: var(--color-primary);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      border-radius: 999px;
+      min-width: 18px;
+      height: 18px;
+      padding: 0 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Botó Menú Mòbil */
+    .mobile-menu-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--color-border);
+      color: var(--color-wood);
+      padding: 0.45rem 0.65rem;
+      border-radius: var(--radius-sm);
+      font-size: 1.15rem;
+      cursor: pointer;
+    }
+
+    /* ==========================================================================
+       SECCIÓ HERO (PORTADA ARTESANA DE BARRI - XARCUTERIA PURA)
+       ========================================================================== */
+    .hero-section {
+      position: relative;
+      background-color: var(--color-wood);
+      background-image: linear-gradient(135deg, rgba(26, 48, 8, 0.93) 0%, rgba(53, 33, 21, 0.91) 100%),
+        url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      color: #FFFFFF;
+      padding: 4.5rem 0 4rem;
+      overflow: hidden;
+      border-bottom: 4px solid var(--color-brand-green);
+    }
+
+    .hero-section::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(45deg, rgba(118, 184, 25, 0.04) 0px, rgba(118, 184, 25, 0.04) 2px, transparent 2px, transparent 12px);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.95fr;
+      align-items: center;
+      gap: 3rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-badge-since {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: #daf59c;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1.15rem;
+    }
+
+    .hero-badge-since img {
+      width: 22px;
+      height: 22px;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+      color: #FAF7F2;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      font-weight: 800;
+    }
+
+    .hero-title span {
+      color: var(--color-brand-green);
+      font-style: italic;
+    }
+
+    .hero-description {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.125rem;
+      line-height: 1.65;
+      color: #E6DFD5;
+      margin-bottom: 2rem;
+      max-width: 580px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2.25rem;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      background: var(--color-primary);
+      color: #FFFFFF;
+      font-weight: 600;
+      padding: 0.85rem 1.65rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--color-accent-gold);
+      box-shadow: 0 4px 14px rgba(123, 17, 19, 0.4);
+      transition: var(--transition-smooth);
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: var(--color-primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(123, 17, 19, 0.5);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      background: rgba(255, 255, 255, 0.12);
+      color: #FAF7F2;
+      font-weight: 600;
+      padding: 0.85rem 1.45rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(230, 223, 213, 0.35);
+      backdrop-filter: blur(4px);
+      transition: var(--transition-smooth);
+      cursor: pointer;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.22);
+      border-color: var(--color-brand-green);
+      transform: translateY(-2px);
+    }
+
+    .hero-trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      border-top: 1px solid rgba(230, 223, 213, 0.2);
+      padding-top: 1.5rem;
+    }
+
+    .hero-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.875rem;
+      color: #e5dacd;
+    }
+
+    .hero-trust-item i {
+      color: var(--color-brand-green);
+      font-size: 1rem;
+    }
+
+    /* Targeta d'aparador a l'Hero (Pernil Ibèric tallat a mà) */
+    .hero-card-frame {
+      background: var(--color-bg);
+      border: 2px solid var(--color-brand-green);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-lg);
+      color: var(--color-text);
+      position: relative;
+    }
+
+    .hero-card-frame::before {
+      content: "";
+      position: absolute;
+      inset: 4px;
+      border: 1px dashed var(--color-brand-green);
+      border-radius: calc(var(--radius-md) - 4px);
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    .hero-card-img-wrap {
+      width: 100%;
+      height: 230px;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      margin-bottom: 1.15rem;
+      background: #e2d9cd;
+      position: relative;
+    }
+
+    .hero-card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .hero-card-frame:hover .hero-card-img-wrap img {
+      transform: scale(1.03);
+    }
+
+    .hero-card-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.4rem;
+      color: var(--color-wood);
+    }
+
+    .hero-card-desc {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .hero-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--color-border);
+      padding-top: 0.85rem;
+    }
+
+    .hero-card-price {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ==========================================================================
+       BARRA DE CONTACTE RÀPID FIXA (80% TRÀFIC MÒBIL)
+       ========================================================================== */
+    .mobile-quick-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--color-brand-green-deep);
+      border-top: 2px solid var(--color-brand-green);
+      z-index: 999;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.25);
+      padding: 0.5rem 0.75rem;
+    }
+
+    .mobile-quick-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr 1fr;
+      gap: 0.5rem;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .mobile-quick-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.2rem;
+      padding: 0.45rem 0.25rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-align: center;
+      transition: var(--transition-smooth);
+      text-decoration: none;
+    }
+
+    .mobile-quick-btn i {
+      font-size: 1.15rem;
+    }
+
+    .mobile-quick-btn.call {
+      background: rgba(255, 255, 255, 0.12);
+      color: #FAF7F2;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .mobile-quick-btn.wa {
+      background: #25D366;
+      color: #0b341c;
+      font-weight: 700;
+      border: 1px solid #1fa851;
+    }
+
+    .mobile-quick-btn.maps {
+      background: rgba(118, 184, 25, 0.2);
+      color: #d8f596;
+      border: 1px solid rgba(118, 184, 25, 0.4);
+    }
+
+    /* ==========================================================================
+       SECCIÓ APARADOR DIGITAL I CATÀLEG FILTRABLE
+       ========================================================================== */
+    .section-padding {
+      padding: 4.5rem 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--color-brand-green-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+      margin-bottom: 0.85rem;
+    }
+
+    .section-subtitle {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.05rem;
+      color: var(--color-text-muted);
+    }
+
+    /* Filtres del catàleg */
+    .catalog-filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .filter-btn {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      color: var(--color-text);
+      padding: 0.55rem 1.15rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .filter-btn:hover {
+      background: var(--color-brand-green-light);
+      border-color: var(--color-brand-green);
+      color: var(--color-brand-green-dark);
+    }
+
+    .filter-btn.active {
+      background: var(--color-brand-green);
+      color: #122304;
+      font-weight: 700;
+      border-color: var(--color-brand-green-dark);
+      box-shadow: 0 2px 6px rgba(118, 184, 25, 0.3);
+    }
+
+    /* Grid de productes de xarcuteria autèntica */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .product-card {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-brand-green);
+    }
+
+    .product-img-wrap {
+      width: 100%;
+      height: 200px;
+      background: #e8e0d5;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .product-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .product-card:hover .product-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .product-category-tag {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(26, 48, 8, 0.85);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      backdrop-filter: blur(2px);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border-left: 2px solid var(--color-brand-green);
+    }
+
+    .product-badge-accent {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: var(--color-brand-green);
+      color: #122304;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    }
+
+    /* Selector de versions / recreacions de fotos d'embotits */
+    .img-version-bar {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      right: 8px;
+      display: flex;
+      gap: 6px;
+      z-index: 2;
+    }
+
+    .img-ver-btn {
+      background: rgba(26, 48, 8, 0.88);
+      color: #f7f4ef;
+      border: 1px solid rgba(118, 184, 25, 0.6);
+      font-size: 0.675rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      backdrop-filter: blur(4px);
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .img-ver-btn:hover,
+    .img-ver-btn.active {
+      background: var(--color-brand-green);
+      color: #122304;
+      border-color: #fff;
+      font-weight: 700;
+    }
+
+    .hero-version-switcher {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      display: flex;
+      gap: 6px;
+      z-index: 2;
+    }
+
+    .hero-ver-btn {
+      background: rgba(30, 20, 10, 0.88);
+      color: #FAF7F2;
+      border: 1px solid var(--color-brand-green);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 4px;
+      cursor: pointer;
+      backdrop-filter: blur(3px);
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .hero-ver-btn:hover,
+    .hero-ver-btn.active {
+      background: var(--color-brand-green);
+      color: #122304;
+      font-weight: 700;
+      border-color: #ffffff;
+    }
+
+    .product-body {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .product-title {
+      font-size: 1.15rem;
+      color: var(--color-wood);
+      margin-bottom: 0.35rem;
+    }
+
+    .product-desc {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      margin-bottom: 1.15rem;
+      flex-grow: 1;
+      line-height: 1.5;
+    }
+
+    .product-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      border-top: 1px solid var(--color-border);
+      padding-top: 0.85rem;
+    }
+
+    .product-price {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--color-primary);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .product-price-sub {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      font-weight: 400;
+      display: block;
+    }
+
+    .btn-add-order {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--color-brand-green-light);
+      color: var(--color-brand-green-dark);
+      border: 1px solid var(--color-brand-green);
+      padding: 0.45rem 0.85rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .btn-add-order:hover {
+      background: var(--color-brand-green);
+      color: #122304;
+    }
+
+    /* Fallback quan no carrega imatge */
+    .img-fallback {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #dfd7cc 0%, #cfc4b5 100%);
+      color: var(--color-wood);
+      font-size: 2rem;
+    }
+
+    .img-fallback span {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--color-wood);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ==========================================================================
+       CONSTRUCTOR D'ENCÀRRECS PER WHATSAPP (MÒDUL D'ALTA CONVERSIÓ)
+       ========================================================================== */
+    .order-builder-section {
+      background: var(--color-bg-alt);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      position: relative;
+    }
+
+    .order-box {
+      background: var(--color-bg-card);
+      border: 2px solid var(--color-brand-green);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      box-shadow: var(--shadow-md);
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .order-box-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .order-box-title {
+      font-size: 1.45rem;
+      color: var(--color-wood);
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .order-box-title i {
+      color: #25D366;
+      font-size: 1.6rem;
+    }
+
+    .order-items-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      min-height: 80px;
+    }
+
+    .order-empty-state {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: var(--color-bg);
+      border: 1px dashed var(--color-border-dark);
+      border-radius: var(--radius-sm);
+      color: var(--color-text-muted);
+      font-size: 0.9375rem;
+    }
+
+    .order-empty-state i {
+      font-size: 1.75rem;
+      color: var(--color-brand-green);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .order-item-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.75rem 1rem;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      animation: fadeIn 0.25s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .order-item-info {
+      flex-grow: 1;
+    }
+
+    .order-item-name {
+      font-weight: 600;
+      color: var(--color-wood);
+      font-size: 0.95rem;
+    }
+
+    .order-item-unit-price {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .order-item-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-qty {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border-dark);
+      width: 28px;
+      height: 28px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--color-wood);
+      transition: var(--transition-smooth);
+    }
+
+    .btn-qty:hover {
+      background: var(--color-primary);
+      color: #fff;
+      border-color: var(--color-primary);
+    }
+
+    .order-item-qty {
+      font-weight: 700;
+      font-size: 0.9rem;
+      min-width: 20px;
+      text-align: center;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .btn-remove-item {
+      background: transparent;
+      border: none;
+      color: #999;
+      cursor: pointer;
+      padding: 0.3rem;
+      font-size: 0.9rem;
+      transition: var(--transition-smooth);
+      margin-left: 0.25rem;
+    }
+
+    .btn-remove-item:hover {
+      color: var(--color-danger);
+    }
+
+    /* Formulari d'opcions d'encàrrec */
+    .order-form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .form-label {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--color-wood);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .form-control {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border-dark);
+      border-radius: var(--radius-sm);
+      padding: 0.65rem 0.85rem;
+      color: var(--color-text);
+      transition: var(--transition-smooth);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--color-brand-green);
+      box-shadow: 0 0 0 3px rgba(118, 184, 25, 0.25);
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    /* Targeta d'instruccions i botó final */
+    .order-action-area {
+      background: #fdfcf8;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .order-summary-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--color-wood);
+    }
+
+    .btn-send-whatsapp {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      background: #25D366;
+      color: #0b341c;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 0.95rem 1.5rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid #1ebc59;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+      cursor: pointer;
+      transition: var(--transition-smooth);
+      text-decoration: none;
+      width: 100%;
+    }
+
+    .btn-send-whatsapp:hover {
+      background: #20ba5a;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(37, 211, 102, 0.45);
+    }
+
+    .order-guarantee-note {
+      font-size: 0.775rem;
+      color: var(--color-text-muted);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+    }
+
+    /* ==========================================================================
+       LES NOSTRES 5 BOTIGUES (SELECTOR INTERACTIU DE SEDES)
+       ========================================================================== */
+    .stores-section {
+      background: var(--color-bg);
+      position: relative;
+    }
+
+    .store-tabs-wrapper {
+      display: flex;
+      overflow-x: auto;
+      gap: 0.5rem;
+      padding-bottom: 0.75rem;
+      margin-bottom: 2rem;
+      scrollbar-width: thin;
+    }
+
+    .store-tab-btn {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: 0.75rem 1.25rem;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: var(--color-text);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.2rem;
+      white-space: nowrap;
+      transition: var(--transition-smooth);
+      flex-shrink: 0;
+    }
+
+    .store-tab-btn span.tab-zone {
+      font-size: 0.75rem;
+      color: var(--color-brand-green-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .store-tab-btn.active {
+      background: var(--color-brand-green-deep);
+      color: #FFFFFF;
+      border-color: var(--color-brand-green);
+      box-shadow: 0 4px 10px rgba(26, 48, 8, 0.25);
+    }
+
+    .store-tab-btn.active span.tab-zone {
+      color: var(--color-brand-green);
+    }
+
+    .store-detail-box {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+    }
+
+    .store-info-panel {
+      padding: 2.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .store-name-title {
+      font-size: 1.65rem;
+      color: var(--color-wood);
+      margin-bottom: 0.5rem;
+    }
+
+    .store-meta-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .store-meta-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      font-size: 0.9375rem;
+    }
+
+    .store-meta-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--color-brand-green-light);
+      color: var(--color-brand-green-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.9rem;
+      margin-top: 0.15rem;
+    }
+
+    .store-meta-content strong {
+      display: block;
+      color: var(--color-wood);
+      font-size: 0.825rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .store-meta-content p {
+      color: var(--color-text-muted);
+    }
+
+    .store-action-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      border-top: 1px solid var(--color-border);
+      padding-top: 1.25rem;
+    }
+
+    .store-map-panel {
+      background: #e5dacd;
+      min-height: 320px;
+      position: relative;
+    }
+
+    .store-map-panel iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      border: none;
+    }
+
+    /* ==========================================================================
+       TRADICIÓ I PROXIMITAT (HISTÒRIA DES DE 1960)
+       ========================================================================== */
+    .history-section {
+      background-color: var(--color-brand-green-deep);
+      color: #FAF7F2;
+      padding: 5rem 0;
+      position: relative;
+      overflow: hidden;
+      border-top: 3px solid var(--color-brand-green);
+    }
+
+    .history-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(118, 184, 25, 0.25) 1px, transparent 1px);
+      background-size: 24px 24px;
+      opacity: 0.2;
+    }
+
+    .history-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 3.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .history-img-frame {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 3px solid var(--color-brand-green);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .history-img-frame img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .history-stamp {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: var(--color-wood);
+      color: var(--color-brand-green);
+      border: 2px solid var(--color-brand-green);
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .history-stamp strong {
+      display: block;
+      font-size: 1.15rem;
+      font-family: 'Playfair Display', serif;
+      color: #FAF7F2;
+    }
+
+    .history-stamp span {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .history-content .section-kicker {
+      color: var(--color-brand-green);
+    }
+
+    .history-content h2 {
+      color: #FAF7F2;
+      font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+      margin-bottom: 1.25rem;
+    }
+
+    .history-prose {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #e5dacd;
+      margin-bottom: 1.75rem;
+    }
+
+    .history-pillars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      border-top: 1px solid rgba(229, 218, 205, 0.2);
+      padding-top: 1.5rem;
+    }
+
+    .history-pillar-item h4 {
+      color: var(--color-brand-green);
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .history-pillar-item p {
+      font-size: 0.85rem;
+      color: #c9baa8;
+    }
+
+    /* ==========================================================================
+       PEU DE PÀGINA I MODALS LEGALS
+       ========================================================================== */
+    footer.site-footer {
+      background: var(--color-wood);
+      color: #d1c7bc;
+      font-size: 0.875rem;
+      border-top: 3px solid var(--color-brand-green);
+      padding: 3.5rem 0 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.45rem;
+      color: #FAF7F2;
+      margin-bottom: 0.35rem;
+      letter-spacing: 0.04em;
+    }
+
+    .footer-brand-sub {
+      color: var(--color-brand-green);
+      font-size: 0.775rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .footer-desc {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: #b8aba0;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-heading {
+      font-size: 0.95rem;
+      color: #FAF7F2;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 1.15rem;
+      border-bottom: 1px solid rgba(118, 184, 25, 0.35);
+      padding-bottom: 0.4rem;
+    }
+
+    .footer-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .footer-list a {
+      color: #b8aba0;
+      transition: var(--transition-smooth);
+    }
+
+    .footer-list a:hover {
+      color: var(--color-brand-green);
+      padding-left: 3px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(229, 218, 205, 0.15);
+      padding-top: 1.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.8125rem;
+      color: #9d8e82;
+    }
+
+    .footer-legal-links {
+      display: flex;
+      gap: 1.25rem;
+    }
+
+    .footer-legal-links a {
+      color: #b8aba0;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .footer-legal-links a:hover {
+      color: var(--color-brand-green);
+    }
+
+    /* Modal Finestra Flotant per Legal / Detalls */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card {
+      background: var(--color-bg);
+      border: 2px solid var(--color-brand-green);
+      border-radius: var(--radius-md);
+      max-width: 650px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 2rem;
+      position: relative;
+      box-shadow: var(--shadow-lg);
+      transform: translateY(15px);
+      transition: transform 0.25s ease;
+    }
+
+    .modal-overlay.active .modal-card {
+      transform: translateY(0);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      background: transparent;
+      border: none;
+      font-size: 1.35rem;
+      color: var(--color-wood);
+      cursor: pointer;
+    }
+
+    .modal-title {
+      font-size: 1.5rem;
+      color: var(--color-wood);
+      margin-bottom: 1rem;
+    }
+
+    .modal-body {
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: var(--color-text);
+    }
+
+    .modal-body p {
+      margin-bottom: 0.85rem;
+    }
+
+    /* Toast de notificació */
+    .toast-notice {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background: var(--color-wood);
+      color: #FAF7F2;
+      border: 1px solid var(--color-brand-green);
+      border-radius: var(--radius-sm);
+      padding: 0.85rem 1.25rem;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.875rem;
+      z-index: 1001;
+      transform: translateY(30px);
+      opacity: 0;
+      pointer-events: none;
+      transition: var(--transition-smooth);
+    }
+
+    .toast-notice.show {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .toast-notice i {
+      color: #25D366;
+      font-size: 1.15rem;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE MOBILE FIRST
+       ========================================================================== */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .history-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .store-detail-box {
+        grid-template-columns: 1fr;
+      }
+      .store-map-panel {
+        min-height: 250px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .top-status-inner {
+        justify-content: center;
+        text-align: center;
+      }
+      .top-info-links {
+        display: none;
+      }
+      .main-nav {
+        display: none;
+      }
+      .main-nav.mobile-active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--color-bg);
+        border-bottom: 2px solid var(--color-brand-green);
+        padding: 1.25rem;
+        box-shadow: var(--shadow-md);
+      }
+      .mobile-menu-toggle {
+        display: block;
+      }
+      .btn-header-order span {
+        display: none;
+      }
+      .mobile-quick-bar {
+        display: block;
+      }
+      body {
+        padding-bottom: 65px; /* Espai per la barra fixa inferior */
+      }
+      .order-form-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .history-pillars {
+        grid-template-columns: 1fr;
+      }
+      .toast-notice {
+        bottom: 75px;
+        left: 15px;
+        right: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. BARRA D'ESTAT OPERATIU DINÀMICA -->
+  <div class="top-status-bar">
+    <div class="container top-status-inner">
+      <div style="display: flex; align-items: center;">
+        <span style="font-size: 0.775rem; color: #e5dacd;">
+          <i class="fa-regular fa-clock" style="color: var(--color-brand-green); margin-right: 4px;"></i>
+          <span data-i18n="schedule_summary">Dl-Dv: 09:00-14:00 i 17:00-20:30 · Ds: 09:00-14:00</span>
+        </span>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 1.25rem;">
+        <div class="top-info-links">
+          <a href="tel:+34933473802" class="top-info-item">
+            <i class="fa-solid fa-phone" style="font-size: 0.75rem;"></i>
+            <span>933 47 38 02</span>
+          </a>
+          <a href="mailto:pedidos@germansgracia.com" class="top-info-item">
+            <i class="fa-solid fa-envelope" style="font-size: 0.75rem;"></i>
+            <span>pedidos@germansgracia.com</span>
+          </a>
+        </div>
+
+        <!-- Selector d'idioma CAT | ES -->
+        <div class="lang-switcher" aria-label="Seleccionar idioma">
+          <button id="lang-cat-btn" class="lang-btn active" onclick="switchLanguage('ca')">CAT</button>
+          <button id="lang-es-btn" class="lang-btn" onclick="switchLanguage('es')">ES</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. CAPÇALERA PRINCIPAL AMB EL LOGO OFICIAL AL PRINCIPI DE TOT -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#hero" class="brand-group" aria-label="Xarcuteria Germans Gràcia">
+        <!-- Logo oficial de Germans Gràcia al principi de tot -->
+        <img src="/assets/aistudio/imatge_34460d3d.png"
+             alt="Logo Germans Gràcia"
+             class="brand-logo-img"
+             width="48"
+             height="48"
+             loading="eager">
+        <div class="brand-text-wrap">
+          <span class="brand-title">Germans Gràcia</span>
+          <span class="brand-subtitle" data-i18n="brand_subtitle">Xarcuters des de 1960 • Barcelona</span>
+        </div>
+      </a>
+
+      <!-- Navegació Desktop -->
+      <nav id="mainNav" class="main-nav" aria-label="Menú principal">
+        <a href="#aparador" class="nav-link" data-i18n="nav_catalog">Aparador de Xarcuteria</a>
+        <a href="#comanda" class="nav-link" data-i18n="nav_order">Encàrrec WhatsApp</a>
+        <a href="#botigues" class="nav-link" data-i18n="nav_stores">Les 5 Botigues</a>
+        <a href="#historia" class="nav-link" data-i18n="nav_history">Tradició des de 1960</a>
+      </nav>
+
+      <!-- Botons d'acció de la capçalera -->
+      <div class="header-actions">
+        <a href="#comanda" class="btn-header-order" title="Anar a l'encàrrec">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span data-i18n="header_cta">Fer Encàrrec</span>
+        </a>
+
+        <!-- Indicador de Carret d'Encàrrecs -->
+        <button id="cartBtn" class="cart-indicator" onclick="scrollToOrder()" title="Veure ítems seleccionats" aria-label="Cistella d'encàrrec">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span id="cartCountBadge" class="cart-badge-count">0</span>
+        </button>
+
+        <!-- Botó Menú Mòbil -->
+        <button id="mobileMenuBtn" class="mobile-menu-toggle" aria-label="Obrir menú" onclick="toggleMobileMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. SECCIÓ HERO (PORTADA ARTESANA DE BARRI - XARCUTERIA PURA) -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-badge-since">
+          <img src="/assets/aistudio/imatge_34460d3d.png" alt="Segell Germans Gràcia" width="22" height="22">
+          <span data-i18n="hero_badge">Xarcuters de confiança des de 1960</span>
+        </div>
+        <h1 class="hero-title" data-i18n="hero_title">
+          El xarcuter de tota la vida, <span>al cor de Gràcia.</span>
+        </h1>
+        <p class="hero-description" data-i18n="hero_desc">
+          Pernils ibèrics de gla tallats a mà al moment, embotits artesans de pagès, formatges nobles d'origen i l'atenció de proximitat dels nostres xarcuters.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#comanda" class="btn-primary">
+            <i class="fa-brands fa-whatsapp" style="font-size: 1.15rem;"></i>
+            <span data-i18n="hero_btn_whatsapp">📱 Encarregar per WhatsApp</span>
+          </a>
+          <a href="#botigues" class="btn-secondary">
+            <i class="fa-solid fa-store"></i>
+            <span data-i18n="hero_btn_stores">📍 Les nostres 5 botigues</span>
+          </a>
+        </div>
+
+        <div class="hero-trust-row">
+          <div class="hero-trust-item">
+            <i class="fa-solid fa-drumstick-bite"></i>
+            <span data-i18n="trust_knife">Pernils ibèrics tallats a ganivet</span>
+          </div>
+          <div class="hero-trust-item">
+            <i class="fa-solid fa-cheese"></i>
+            <span data-i18n="trust_cheese">Formatges artesans de pagès</span>
+          </div>
+          <div class="hero-trust-item">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <span data-i18n="trust_pickup">Encàrrecs sense cues a botiga</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Targeta destacada de l'Hero (Pernil Ibèric de Bellota llescat fi) -->
+      <div class="hero-card-frame">
+        <div class="hero-card-img-wrap">
+          <img id="heroProductImg"
+               src="/assets/aistudio/imagessarrai_93b66f84.jpeg"
+               alt="Pernil Ibèric de Bellota tallat a mà"
+               referrerpolicy="no-referrer"
+               loading="eager"
+               onerror="this.onerror=null; this.src='/assets/images/pernil_iberic_ganivet_1793276462170.jpg';">
+        </div>
+        <div style="margin-bottom: 0.35rem;">
+          <span style="font-size: 0.725rem; font-weight: 700; color: var(--color-primary); text-transform: uppercase;" data-i18n="hero_highlight_tag">
+            Especialitat de la Casa
+          </span>
+        </div>
+        <h3 class="hero-card-title">Pernil Ibèric de Bellota (Tallat a mà)</h3>
+        <p class="hero-card-desc" data-i18n="hero_highlight_desc">
+          Peces pures seleccionades directament dels millors assecadors. Curació de 36 mesos, vetejat noble i aroma inconfusible de gla.
+        </p>
+        <div class="hero-card-footer">
+          <div>
+            <span class="hero-card-price">18,50 €</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted); display: block;">/ ració 100g llescat fi</span>
+          </div>
+          <button class="btn-primary" style="padding: 0.55rem 1rem; font-size: 0.85rem;" onclick="addToOrder(1)">
+            <i class="fa-solid fa-plus"></i> <span data-i18n="btn_add_to_order">Afegir a l'Encàrrec</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. APARADOR DIGITAL I CATÀLEG FILTRABLE -->
+  <section id="aparador" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker" data-i18n="catalog_kicker">Aparador de Xarcuteria</span>
+        <h2 class="section-title" data-i18n="catalog_title">El Millor del Nostre Taulell</h2>
+        <p class="section-subtitle" data-i18n="catalog_subtitle">
+          Embotits tradicionals de pagès, pernils ibèrics tallats al moment i formatges artesans llestos per recollir a qualsevol de les nostres 5 botigues.
+        </p>
+      </div>
+
+      <!-- Filtres interactius JS -->
+      <div class="catalog-filters">
+        <button class="filter-btn active" data-filter="all" onclick="filterCatalog('all', this)" data-i18n="filter_all">Tot el Catàleg</button>
+        <button class="filter-btn" data-filter="pernils" onclick="filterCatalog('pernils', this)" data-i18n="filter_hams">Pernils i Embotits</button>
+        <button class="filter-btn" data-filter="formatges" onclick="filterCatalog('formatges', this)" data-i18n="filter_cheeses">Formatges de Pagès</button>
+        <button class="filter-btn" data-filter="safates" onclick="filterCatalog('safates', this)" data-i18n="filter_trays">Safates de Tast</button>
+        <button class="filter-btn" data-filter="nadal" onclick="filterCatalog('nadal', this)" data-i18n="filter_xmas">Lots i Paneres</button>
+      </div>
+
+      <!-- Grid de targetes de producte (Xarcuteria autèntica, sense plats cuinats) -->
+      <div id="productsGrid" class="products-grid">
+        <!-- Renderitzat automàticament mitjançant JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. MÒDUL DE CONSTRUCCIÓ D'ENCÀRRECS PER WHATSAPP -->
+  <section id="comanda" class="order-builder-section section-padding">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <span class="section-kicker" data-i18n="order_kicker">Comandes Ràpides</span>
+        <h2 class="section-title" data-i18n="order_title">Construïdor d'Encàrrecs per WhatsApp</h2>
+        <p class="section-subtitle" data-i18n="order_subtitle">
+          Prepara la comanda des del mòbil, tria la seu de Barcelona on vols recollir-la i els nostres xarcuters te la tindran tallada i llesta sense fer cues.
+        </p>
+      </div>
+
+      <div class="order-box">
+        <div class="order-box-header">
+          <h3 class="order-box-title">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span data-i18n="order_box_heading">La teva Comanda Personalitzada</span>
+          </h3>
+          <button class="btn-secondary" style="font-size: 0.75rem; padding: 0.35rem 0.75rem; color: var(--color-wood); border-color: var(--color-border-dark);" onclick="clearAllOrderItems()">
+            <i class="fa-regular fa-trash-can"></i> <span data-i18n="btn_clear_order">Buidar llista</span>
+          </button>
+        </div>
+
+        <!-- Llista d'articles seleccionats -->
+        <div id="orderItemsContainer" class="order-items-list">
+          <!-- Estat buit o llista de files JS -->
+        </div>
+
+        <!-- Formulari de detalls d'encàrrec -->
+        <form id="orderForm" onsubmit="event.preventDefault(); submitWhatsAppOrder();">
+          <div class="order-form-grid">
+            <!-- Nota lliure / personalitzada -->
+            <div class="form-group full-width">
+              <label class="form-label" for="customOrderNotes">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <span data-i18n="label_notes">Nota o instruccions del tall (gruix del pernil, quantitats, preferències):</span>
+              </label>
+              <textarea id="customOrderNotes" class="form-control" placeholder="Ex: Pernil ibèric tallat molt fi, safata d'embotits per a 6 persones per a divendres a la tarda..." data-i18n-ph="ph_notes"></textarea>
+            </div>
+
+            <!-- Botiga de recollida -->
+            <div class="form-group">
+              <label class="form-label" for="storeSelect">
+                <i class="fa-solid fa-location-dot" style="color: var(--color-primary);"></i>
+                <span data-i18n="label_pickup_store">Botiga de recollida a Barcelona:</span>
+              </label>
+              <select id="storeSelect" class="form-control" required>
+                <option value="1">1. Vila de Gràcia — Carrer d'Astúries, 9</option>
+                <option value="2">2. Vila de Gràcia — Travessera de Gràcia, 206</option>
+                <option value="3">3. L'Eixample — Carrer de Mallorca, 489</option>
+                <option value="4">4. Ciutat Vella — Carrer de Torres i Amat, 1</option>
+                <option value="5">5. Sant Andreu — Carrer Gran de Sant Andreu, 297</option>
+              </select>
+            </div>
+
+            <!-- Data i Franja Horària -->
+            <div class="form-group">
+              <label class="form-label" for="pickupTime">
+                <i class="fa-regular fa-calendar-check" style="color: var(--color-brand-green-dark);"></i>
+                <span data-i18n="label_pickup_time">Dia i franja aproximada de recollida:</span>
+              </label>
+              <input type="text" id="pickupTime" class="form-control" placeholder="Ex: Avui a les 18:30h / Dissabte a les 12:00h" data-i18n-ph="ph_time" required>
+            </div>
+
+            <!-- Nom del client -->
+            <div class="form-group">
+              <label class="form-label" for="customerName">
+                <i class="fa-regular fa-user"></i>
+                <span data-i18n="label_client_name">El teu nom:</span>
+              </label>
+              <input type="text" id="customerName" class="form-control" placeholder="Nom per identificar la comanda" data-i18n-ph="ph_name" required>
+            </div>
+
+            <!-- Telèfon de contacte -->
+            <div class="form-group">
+              <label class="form-label" for="customerPhone">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <span data-i18n="label_client_phone">Telèfon de contacte (opcional):</span>
+              </label>
+              <input type="tel" id="customerPhone" class="form-control" placeholder="Per confirmar la comanda">
+            </div>
+          </div>
+
+          <!-- Zona d'acció final -->
+          <div class="order-action-area">
+            <div class="order-summary-row">
+              <span data-i18n="order_estimate_text">Total estimat orientatiu:</span>
+              <span id="orderTotalSum" class="product-price" style="font-size: 1.35rem;">0,00 €</span>
+            </div>
+
+            <button type="submit" class="btn-send-whatsapp">
+              <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem;"></i>
+              <span data-i18n="btn_send_whatsapp_action">Enviar Encàrrec per WhatsApp</span>
+            </button>
+
+            <div class="order-guarantee-note">
+              <i class="fa-solid fa-shield-halved" style="color: var(--color-brand-green-dark);"></i>
+              <span data-i18n="order_disclaimer">El xarcuter revisarà l'encàrrec i et confirmarà l'hora de recollida per WhatsApp sense compromís. Pagament directe a botiga.</span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. LES NOSTRES 5 BOTIGUES (SELECTOR INTERACTIU DE SEDES) -->
+  <section id="botigues" class="stores-section section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker" data-i18n="stores_kicker">Presència a Barcelona</span>
+        <h2 class="section-title" data-i18n="stores_title">Les Nostres 5 Botigues de Barri</h2>
+        <p class="section-subtitle" data-i18n="stores_subtitle">
+          Troba el teu establiment de proximitat a Gràcia, Eixample, Ciutat Vella o Sant Andreu de Palomar.
+        </p>
+      </div>
+
+      <!-- Pestanyes de selecció de botiga -->
+      <div class="store-tabs-wrapper" role="tablist">
+        <button class="store-tab-btn active" onclick="activateStoreTab(0, this)" role="tab">
+          <span class="tab-zone">Vila de Gràcia</span>
+          <span>C/ Astúries, 9</span>
+        </button>
+        <button class="store-tab-btn" onclick="activateStoreTab(1, this)" role="tab">
+          <span class="tab-zone">Vila de Gràcia</span>
+          <span>Travessera de Gràcia, 206</span>
+        </button>
+        <button class="store-tab-btn" onclick="activateStoreTab(2, this)" role="tab">
+          <span class="tab-zone">L'Eixample</span>
+          <span>C/ Mallorca, 489</span>
+        </button>
+        <button class="store-tab-btn" onclick="activateStoreTab(3, this)" role="tab">
+          <span class="tab-zone">Ciutat Vella</span>
+          <span>C/ Torres i Amat, 1</span>
+        </button>
+        <button class="store-tab-btn" onclick="activateStoreTab(4, this)" role="tab">
+          <span class="tab-zone">Sant Andreu</span>
+          <span>Gran de Sant Andreu, 297</span>
+        </button>
+      </div>
+
+      <!-- Contingut de la botiga activa -->
+      <div class="store-detail-box">
+        <div class="store-info-panel">
+          <div>
+            <span id="activeStoreDistrict" style="color: var(--color-brand-green-dark); font-weight: 700; font-size: 0.825rem; text-transform: uppercase; letter-spacing: 0.08em;">
+              Vila de Gràcia
+            </span>
+            <h3 id="activeStoreName" class="store-name-title">Carrer d'Astúries, 9</h3>
+            <p id="activeStoreDesc" style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+              La seu històrica al cor de la Vila de Gràcia, al costat de la plaça del Diamant i el metro Fontana.
+            </p>
+
+            <div class="store-meta-list">
+              <div class="store-meta-item">
+                <div class="store-meta-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="store-meta-content">
+                  <strong data-i18n="store_address_label">Adreça física:</strong>
+                  <p id="activeStoreAddress">Carrer d'Astúries, 9, 08012 Barcelona</p>
+                </div>
+              </div>
+
+              <div class="store-meta-item">
+                <div class="store-meta-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="store-meta-content">
+                  <strong data-i18n="store_phone_label">Telèfon directe:</strong>
+                  <p><a id="activeStorePhoneLink" href="tel:+34935019303" style="color: var(--color-wood); font-weight: 600;">+34 935 01 93 03</a></p>
+                </div>
+              </div>
+
+              <div class="store-meta-item">
+                <div class="store-meta-icon"><i class="fa-regular fa-clock"></i></div>
+                <div class="store-meta-content">
+                  <strong data-i18n="store_hours_label">Horari comercial:</strong>
+                  <p id="activeStoreHours">Dilluns a Divendres: 09:00–14:00 i 17:00–20:30<br>Dissabte: 09:00–14:00 · Diumenge tancat</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="store-action-buttons">
+            <a id="activeStoreMapsBtn" href="https://maps.google.com/?q=Carrer+d'Asturies+9+Barcelona" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="color: var(--color-wood); border-color: var(--color-border-dark);">
+              <i class="fa-solid fa-diamond-turn-right" style="color: var(--color-brand-green-dark);"></i>
+              <span data-i18n="btn_how_to_get">Com arribar (Google Maps)</span>
+            </a>
+            <button class="btn-primary" style="padding: 0.65rem 1.15rem; font-size: 0.85rem;" onclick="selectStoreForOrder()">
+              <i class="fa-solid fa-cart-arrow-down"></i>
+              <span data-i18n="btn_select_store_pickup">Triar per recollir comanda</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="store-map-panel">
+          <iframe id="activeStoreIframe"
+                  title="Mapa d'ubicació de la botiga"
+                  src="https://maps.google.com/maps?q=Carrer+d'Asturies+9+08012+Barcelona&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. TRADICIÓ I PROXIMITAT (HISTÒRIA DES DE 1960) -->
+  <section id="historia" class="history-section">
+    <div class="container history-grid">
+      <div class="history-content">
+        <span class="section-kicker" data-i18n="history_kicker">Patrimoni Artesà</span>
+        <h2 data-i18n="history_title">Més de 60 anys d'ofici xarcuter a Barcelona</h2>
+        <div class="history-prose">
+          <p data-i18n="history_p1">
+            Fundada l'any 1960 a la Vila de Gràcia, la <strong>Xarcuteria Germans Gràcia</strong> ha mantingut viva l'essència de la xarcuteria de barri: selecció dels millors pernils ibèrics de gla, embotits tradicionals elaborats amb cura i el tall a mà que distingeix el bon ofici.
+          </p>
+          <p data-i18n="history_p2">
+            De generació en generació, hem ampliat la presència a punts clau com l'Eixample, Ciutat Vella i Sant Andreu de Palomar, apropant l'autèntica xarcuteria artesana amb la facilitat d'encarregar còmodament per WhatsApp.
+          </p>
+        </div>
+
+        <div class="history-pillars">
+          <div class="history-pillar-item">
+            <h4><i class="fa-solid fa-drumstick-bite"></i> <span data-i18n="pillar_1_title">Pernils d'alta curació</span></h4>
+            <p data-i18n="pillar_1_desc">Ibèrics purs de gla tallats a mà a ganivet per preservar tot el bouquet i greix infiltrat.</p>
+          </div>
+          <div class="history-pillar-item">
+            <h4><i class="fa-solid fa-seedling"></i> <span data-i18n="pillar_2_title">Embotits de poble i proximitat</span></h4>
+            <p data-i18n="pillar_2_desc">Fuet, secallona, bull artesà i botifarres elaborades fidelment segons recepta tradicional.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="history-img-frame">
+        <img src="/assets/images/embotits_fuet_secallona_1793276462559.jpg"
+             alt="Taulell tradicional d'embotits artesans Germans Gràcia"
+             referrerpolicy="no-referrer"
+             loading="lazy"
+             onerror="this.onerror=null; this.src='/assets/aistudio/imagesgauss_8572786d.jpeg';">
+        <div class="history-stamp">
+          <strong>1960 – 2026</strong>
+          <span data-i18n="stamp_label">Tradició de Barri</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. PEU DE PÀGINA I DADES CORPORATIVES -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Columna 1: Marca -->
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.85rem;">
+            <img src="/assets/aistudio/imatge_34460d3d.png" alt="Logo Germans Gràcia" width="42" height="42" style="border-radius: 4px; border: 1px solid var(--color-brand-green);">
+            <div>
+              <span class="footer-brand-title" style="display: block; line-height: 1;">GERMANS GRÀCIA</span>
+              <span class="footer-brand-sub" style="margin: 0;" data-i18n="footer_sub">Xarcuters Artesans des de 1960</span>
+            </div>
+          </div>
+          <p class="footer-desc" data-i18n="footer_desc">
+            Xarxa de botigues tradicionals de Barcelona especialitzades en pernils ibèrics de gla tallats a mà, embotits artesans de pagès i formatges selectes.
+          </p>
+          <div style="font-size: 0.8125rem; color: #b8aba0;">
+            <p><strong>GERMANS GRACIA XARCUTERS S.L.</strong></p>
+            <p>CIF: B65932238</p>
+          </div>
+        </div>
+
+        <!-- Columna 2: Les Botigues -->
+        <div>
+          <h4 class="footer-heading" data-i18n="footer_stores_title">Les Nostres 5 Seus</h4>
+          <ul class="footer-list">
+            <li><a href="#botigues" onclick="activateStoreTab(0)">Vila de Gràcia (Astúries, 9)</a></li>
+            <li><a href="#botigues" onclick="activateStoreTab(1)">Vila de Gràcia (Travessera, 206)</a></li>
+            <li><a href="#botigues" onclick="activateStoreTab(2)">L'Eixample (Mallorca, 489)</a></li>
+            <li><a href="#botigues" onclick="activateStoreTab(3)">Ciutat Vella (Torres i Amat, 1)</a></li>
+            <li><a href="#botigues" onclick="activateStoreTab(4)">Sant Andreu (Gran de St. Andreu, 297)</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Especialitats -->
+        <div>
+          <h4 class="footer-heading" data-i18n="footer_specialties_title">Especialitats de Xarcuteria</h4>
+          <ul class="footer-list">
+            <li><a href="#aparador" onclick="filterCatalog('pernils')">Pernil Ibèric de Bellota</a></li>
+            <li><a href="#aparador" onclick="filterCatalog('pernils')">Embotits Ibèrics i de Pagès</a></li>
+            <li><a href="#aparador" onclick="filterCatalog('formatges')">Taules de Formatges Artesans</a></li>
+            <li><a href="#aparador" onclick="filterCatalog('safates')">Safates de Tast d'Embotits</a></li>
+            <li><a href="#aparador" onclick="filterCatalog('nadal')">Lots de Pernil i Cistelles</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Contacte i Atenció -->
+        <div>
+          <h4 class="footer-heading" data-i18n="footer_contact_title">Atenció Directa</h4>
+          <ul class="footer-list">
+            <li>
+              <a href="tel:+34933473802" style="display: flex; align-items: center; gap: 0.5rem;">
+                <i class="fa-solid fa-phone" style="color: var(--color-brand-green);"></i> +34 933 47 38 02
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/34933473802?text=Hola%20Germans%20Gr%C3%A0cia" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 0.5rem; color: #25D366; font-weight: 700;">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp Comandes
+              </a>
+            </li>
+            <li>
+              <a href="mailto:pedidos@germansgracia.com" style="display: flex; align-items: center; gap: 0.5rem;">
+                <i class="fa-regular fa-envelope" style="color: var(--color-brand-green);"></i> pedidos@germansgracia.com
+              </a>
+            </li>
+            <li style="margin-top: 0.75rem; font-size: 0.8rem; color: #9d8e82;">
+              Barcelona · Comerç Emblemàtic
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Barra de Copyright i Enllaços Legals -->
+      <div class="footer-bottom">
+        <div>
+          © 1960 – 2026 GERMANS GRACIA XARCUTERS S.L. · <span data-i18n="footer_heritage_note">Comerç i Patrimoni Gastronòmic de Barcelona</span>
+        </div>
+        <div class="footer-legal-links">
+          <a onclick="openLegalModal('avis')">Avís Legal</a>
+          <a onclick="openLegalModal('privacitat')">Privacitat</a>
+          <a onclick="openLegalModal('cookies')">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 9. BARRA FIXA DE CONTACTE RÀPID PER A MÒBIL (CRÍTICA EN UN 80% D'USUARIS) -->
+  <div class="mobile-quick-bar" aria-label="Accions ràpides per a mòbil">
+    <div class="mobile-quick-grid">
+      <a href="tel:+34933473802" class="mobile-quick-btn call">
+        <i class="fa-solid fa-phone"></i>
+        <span data-i18n="quick_call">Trucar</span>
+      </a>
+      <a href="https://wa.me/34933473802?text=Hola%20Xarcuteria%20Germans%20Gr%C3%A0cia,%20voldria%20fer%20una%20consulta" target="_blank" rel="noopener noreferrer" class="mobile-quick-btn wa">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span data-i18n="quick_whatsapp">WhatsApp</span>
+      </a>
+      <a href="#botigues" class="mobile-quick-btn maps">
+        <i class="fa-solid fa-location-dot"></i>
+        <span data-i18n="quick_maps">Botigues</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- TOAST DE CONFIRMACIÓ -->
+  <div id="toastNotice" class="toast-notice" role="status" aria-live="polite">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastNoticeText">Producte afegit a l'encàrrec!</span>
+  </div>
+
+  <!-- MODAL DE TEXT LEGAL / INFORMACIÓ -->
+  <div id="legalModalOverlay" class="modal-overlay" onclick="closeLegalModal(event)">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <button class="modal-close-btn" onclick="closeLegalModal()" aria-label="Tancar finestra">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <h3 id="modalTitle" class="modal-title">Avís Legal</h3>
+      <div id="modalBody" class="modal-body">
+        <!-- Contingut legal dinàmic -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       JAVASCRIPT VANILLA INTEGRAT (ESTAT HORARI, TRADUCCIONS, CATÀLEG I ENVIAMENT)
+       ========================================================================== -->
+  <script>
+    // --------------------------------------------------------------------------
+    // DADES DE LES 5 BOTIGUES (INFORME ESTRATÈGIC)
+    // --------------------------------------------------------------------------
+    const STORES_DATA = [
+      {
+        id: 1,
+        district: "Vila de Gràcia",
+        district_es: "Vila de Gràcia",
+        name: "Carrer d'Astúries, 9",
+        address: "Carrer d'Astúries, 9, 08012 Barcelona",
+        phone: "+34 935 01 93 03",
+        phoneRaw: "34935019303",
+        hours_ca: "Dilluns a Divendres: 09:00–14:00 i 17:00–20:30\nDissabte: 09:00–14:00 · Diumenge tancat",
+        hours_es: "Lunes a Viernes: 09:00–14:00 y 17:00–20:30\nSábado: 09:00–14:00 · Domingo cerrado",
+        desc_ca: "La seu històrica al cor de la Vila de Gràcia, a tocar de la plaça del Diamant i el metro Fontana (L3).",
+        desc_es: "La sede histórica en el corazón de Gràcia, junto a la plaza del Diamant y el metro Fontana (L3).",
+        mapsUrl: "https://maps.google.com/?q=Carrer+d'Asturies+9+Barcelona",
+        iframeSrc: "https://maps.google.com/maps?q=Carrer+d'Asturies+9+08012+Barcelona&t=&z=16&ie=UTF8&iwloc=&output=embed"
+      },
+      {
+        id: 2,
+        district: "Vila de Gràcia",
+        district_es: "Vila de Gràcia",
+        name: "Travessera de Gràcia, 206",
+        address: "Travessera de Gràcia, 206, 08012 Barcelona",
+        phone: "+34 935 01 93 03",
+        phoneRaw: "34935019303",
+        hours_ca: "Dilluns a Divendres: 09:00–14:00 i 17:00–20:30\nDissabte: 09:00–14:00 · Diumenge tancat",
+        hours_es: "Lunes a Viernes: 09:00–14:00 y 17:00–20:30\nSábado: 09:00–14:00 · Domingo cerrado",
+        desc_ca: "A l'eix comercial de Travessera, a un pas del Mercat de l'Abaceria Central.",
+        desc_es: "En el eje comercial de Travessera, a un paso del Mercat de l'Abaceria Central.",
+        mapsUrl: "https://maps.google.com/?q=Travessera+de+Gracia+206+Barcelona",
+        iframeSrc: "https://maps.google.com/maps?q=Travessera+de+Gracia+206+08012+Barcelona&t=&z=16&ie=UTF8&iwloc=&output=embed"
+      },
+      {
+        id: 3,
+        district: "L'Eixample",
+        district_es: "L'Eixample",
+        name: "Carrer de Mallorca, 489",
+        address: "Carrer de Mallorca, 489, 08013 Barcelona",
+        phone: "+34 933 47 38 02",
+        phoneRaw: "34933473802",
+        hours_ca: "Dilluns a Divendres: 09:00–14:00 i 17:00–20:30\nDissabte: 09:00–14:00 · Diumenge tancat",
+        hours_es: "Lunes a Viernes: 09:00–14:00 y 17:00–20:30\nSábado: 09:00–14:00 · Domingo cerrado",
+        desc_ca: "Al barri de Sagrada Família, facilitant el producte xarcuter de qualitat als veïns de l'Eixample.",
+        desc_es: "En el barrio de Sagrada Família, acercando el producto charcutero de calidad a los vecinos del Eixample.",
+        mapsUrl: "https://maps.google.com/?q=Carrer+de+Mallorca+489+Barcelona",
+        iframeSrc: "https://maps.google.com/maps?q=Carrer+de+Mallorca+489+08013+Barcelona&t=&z=16&ie=UTF8&iwloc=&output=embed"
+      },
+      {
+        id: 4,
+        district: "Ciutat Vella",
+        district_es: "Ciutat Vella",
+        name: "Carrer de Torres i Amat, 1",
+        address: "Carrer de Torres i Amat, 1, 08001 Barcelona",
+        phone: "+34 933 02 00 03",
+        phoneRaw: "34933020003",
+        hours_ca: "Dilluns a Divendres: 09:00–14:00 i 17:00–20:30\nDissabte: 09:00–14:00 · Diumenge tancat",
+        hours_es: "Lunes a Viernes: 09:00–14:00 y 17:00–20:30\nSábado: 09:00–14:00 · Domingo cerrado",
+        desc_ca: "Al costat de la plaça Universitat i el Raval nord. Referència reconeguda per la seva varietat en pernils i embotits.",
+        desc_es: "Junto a plaza Universitat y el Raval norte. Reconocida por su excelencia y variedad en jamones y embutidos.",
+        mapsUrl: "https://maps.google.com/?q=Carrer+de+Torres+i+Amat+1+Barcelona",
+        iframeSrc: "https://maps.google.com/maps?q=Carrer+de+Torres+i+Amat+1+08001+Barcelona&t=&z=16&ie=UTF8&iwloc=&output=embed"
+      },
+      {
+        id: 5,
+        district: "Sant Andreu",
+        district_es: "Sant Andreu",
+        name: "Gran de Sant Andreu, 297",
+        address: "Carrer Gran de Sant Andreu, 297, 08030 Barcelona",
+        phone: "+34 933 47 38 02",
+        phoneRaw: "34933473802",
+        hours_ca: "Dilluns a Divendres: 09:00–14:00 i 17:00–20:30\nDissabte: 09:00–14:00 · Diumenge tancat",
+        hours_es: "Lunes a Viernes: 09:00–14:00 y 17:00–20:30\nSábado: 09:00–14:00 · Domingo cerrado",
+        desc_ca: "Al cor de l'eix per a vianants de Sant Andreu de Palomar, amb el caliu veïnal i tradicional de sempre.",
+        desc_es: "En pleno eje peatonal de Sant Andreu de Palomar, con el ambiente vecinal y tradicional de siempre.",
+        mapsUrl: "https://maps.google.com/?q=Carrer+Gran+de+Sant+Andreu+297+Barcelona",
+        iframeSrc: "https://maps.google.com/maps?q=Carrer+Gran+de+Sant+Andreu+297+08030+Barcelona&t=&z=16&ie=UTF8&iwloc=&output=embed"
+      }
+    ];
+
+    // --------------------------------------------------------------------------
+    // CATÀLEG DE PRODUCTES - EXCLUSIVAMENT XARCUTERIA, EMBOTITS I FORMATGES
+    // Sense plats cuinats de restaurant; productes de taulell i llescat fi.
+    // --------------------------------------------------------------------------
+    const PRODUCTS = [
+      {
+        id: 1,
+        category: "pernils",
+        badge_ca: "Tall a mà",
+        badge_es: "Corte a mano",
+        title_ca: "Pernil Ibèric de Bellota (Tallat a mà)",
+        title_es: "Jamón Ibérico de Bellota (Cortado a mano)",
+        desc_ca: "100% ibèric certificat de gla. Tallat a ganivet al moment en llonzes fines amb el greix infiltrat i buquet madur excepcional.",
+        desc_es: "100% ibérico certificado de bellota. Cortado a cuchillo al momento en finas lonchas con grasa entreverada y aroma profundo.",
+        price: 18.50,
+        unit_ca: "100g llescat fi al moment",
+        unit_es: "100g loncheado fino al momento",
+        img: "/assets/aistudio/imagessarrai_93b66f84.jpeg",
+        gallery: [
+          { label: "Tall a ganivet", src: "/assets/aistudio/imagessarrai_93b66f84.jpeg" },
+          { label: "Detall mestre", src: "/assets/images/pernil_iberic_ganivet_1793276462170.jpg" }
+        ],
+        fallbackIcon: "fa-drumstick-bite"
+      },
+      {
+        id: 2,
+        category: "pernils",
+        badge_ca: "Gran Reserva",
+        badge_es: "Gran Reserva",
+        title_ca: "Pernil Serrà Reserva d'Alta Cura",
+        title_es: "Jamón Serrano Reserva de Alta Curación",
+        desc_ca: "Peça de muntanya en suport xarcuter amb més de 18 mesos de curació lenta. Vetejat suau, sabor dolç i punt just de sal per al consum diari.",
+        desc_es: "Pieza de montaña en jamonero con más de 18 meses de curación lenta. Veteado suave, sabor dulce y punto justo de sal.",
+        price: 5.20,
+        unit_ca: "150g llescat fi",
+        unit_es: "150g loncheado fino",
+        img: "/assets/images/pernil_serra_reserva_1793276463153.jpg",
+        gallery: [
+          { label: "Peça al pernilé", src: "/assets/images/pernil_serra_reserva_1793276463153.jpg" },
+          { label: "Llescat fi", src: "/assets/aistudio/imagessarrai_93b66f84.jpeg" }
+        ],
+        fallbackIcon: "fa-drumstick-bite"
+      },
+      {
+        id: 3,
+        category: "pernils",
+        badge_ca: "Embotits de Pagès",
+        badge_es: "Embutidos de Pagès",
+        title_ca: "Embotits Ibèrics i de Pagès (Fuet i Secallona)",
+        title_es: "Embutidos Ibéricos y de Pagès (Fuet y Secallona)",
+        desc_ca: "Autèntic assortiment de pagès: fuet artesà de Vic amb flor blanca, secallona curada i llonganissa de muntanya elaborada a poble.",
+        desc_es: "Auténtico surtido tradicional: fuet de Vic con flora natural, secallona curada y salchichón de montaña artesanal.",
+        price: 9.80,
+        unit_ca: "safata llescada 250g",
+        unit_es: "bandeja loncheada 250g",
+        img: "/assets/aistudio/imagesgauss_8572786d.jpeg",
+        gallery: [
+          { label: "Embotits de pagès", src: "/assets/aistudio/imagesgauss_8572786d.jpeg" },
+          { label: "Taulell xarcuter", src: "/assets/images/embotits_fuet_secallona_1793276462559.jpg" }
+        ],
+        fallbackIcon: "fa-bacon"
+      },
+      {
+        id: 4,
+        category: "formatges",
+        badge_ca: "Formatges de Pagès",
+        badge_es: "Quesos de Pagès",
+        title_ca: "Taula Assortida de Formatges Artesans",
+        title_es: "Tabla Surtida de Quesos Artesanos",
+        desc_ca: "Falques tallades de formatge gallec de Tetilla D.O.P., ovella vell de pastura i formatge de cabra artesà. Tot a punt per degustar.",
+        desc_es: "Cuñas cortadas de queso gallego de Tetilla D.O.P., oveja viejo de pasto y cabra artesana. Todo listo para degustar.",
+        price: 24.00,
+        unit_ca: "taula variada 450g (4-6 pers.)",
+        unit_es: "tabla variada 450g (4-6 pers.)",
+        img: "https://images.unsplash.com/photo-1631379578550-7038263db699?auto=format&fit=crop&w=700&q=80",
+        fallbackIcon: "fa-cheese"
+      },
+      {
+        id: 5,
+        category: "safates",
+        badge_ca: "Llest per Servir",
+        badge_es: "Listo para Servir",
+        title_ca: "Safata de Tast d'Embotits i Pernil Germans Gràcia",
+        title_es: "Bandeja Degustación de Embutidos y Jamón",
+        desc_ca: "Presentació xarcutera de luxe: ventall de pernil ibèric acabat de tallar, rodanxes de fuet i llonganissa, falques de formatge i bastonets artesans.",
+        desc_es: "Presentación impecable: abanico de jamón ibérico recién cortado, rodajas de fuet y salchichón, cuñas de queso y picos artesanos.",
+        price: 36.00,
+        unit_ca: "safata xarcutera (6-8 pers.)",
+        unit_es: "bandeja charcutera (6-8 pers.)",
+        img: "/assets/images/safata_tast_xarcuteria_1793276465810.jpg",
+        gallery: [
+          { label: "Safata de tast", src: "/assets/images/safata_tast_xarcuteria_1793276465810.jpg" },
+          { label: "Embotit de pagès", src: "/assets/aistudio/imagesgauss_8572786d.jpeg" }
+        ],
+        fallbackIcon: "fa-plate-wheat"
+      },
+      {
+        id: 6,
+        category: "pernils",
+        badge_ca: "Elaborat Propi",
+        badge_es: "Elaborado Propio",
+        title_ca: "Botifarra de Pagès i Bull Tradicional",
+        title_es: "Butifarra de Pagès y Bull Tradicional",
+        desc_ca: "Embotit fresc i cuit del nostre taulell: botifarra de pagès enrotllada, botifarra blanca, botifarra negra i bull d'ou centenari.",
+        desc_es: "Embutido tradicional: butifarra de pagès fresca, blanca, negra de cebolla y bull de huevo tradicional.",
+        price: 8.90,
+        unit_ca: "safata variada 400g",
+        unit_es: "bandeja variada 400g",
+        img: "/assets/images/botifarra_bull_artesa_1793276464792.jpg",
+        gallery: [
+          { label: "Obrador artesà", src: "/assets/images/botifarra_bull_artesa_1793276464792.jpg" }
+        ],
+        fallbackIcon: "fa-drumstick-bite"
+      },
+      {
+        id: 7,
+        category: "formatges",
+        badge_ca: "D.O.P. Tetilla",
+        badge_es: "D.O.P. Tetilla",
+        title_ca: "Formatge Gallec de Tetilla Artesà (Falca)",
+        title_es: "Queso Gallego de Tetilla Artesano (Cuña)",
+        desc_ca: "Falca de formatge tradicional de vaca, pasta tova, textura extremadament cremosa i gust làctic pur.",
+        desc_es: "Cuña de queso gallego tradicional, pasta tierna, textura mantecosa y sabor láctico puro.",
+        price: 4.80,
+        unit_ca: "falca de 250g",
+        unit_es: "cuña de 250g",
+        img: "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?auto=format&fit=crop&w=700&q=80",
+        fallbackIcon: "fa-cheese"
+      },
+      {
+        id: 8,
+        category: "nadal",
+        badge_ca: "Lot Gourmet",
+        badge_es: "Lote Gourmet",
+        title_ca: "Lot Xarcuter Festiu / Panera de Proximitat",
+        title_es: "Lote Charcutero Festivo / Cesta Gourmet",
+        desc_ca: "Caixa selecta amb sobres de pernil ibèric de gla tallat a mà, falca de formatge curat, fuet artesà de Vic, vi negre i torró de pagès.",
+        desc_es: "Caja selecta con jamón ibérico cortado a mano, queso de oveja curado, fuet artesano de Vic, vino y turrón tradicional.",
+        price: 78.00,
+        unit_ca: "lot complet en caixa de fusta",
+        unit_es: "lote completo en caja de madera",
+        img: "https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=700&q=80",
+        fallbackIcon: "fa-gift"
+      }
+    ];
+
+    // --------------------------------------------------------------------------
+    // DICCIONARI D'IDIOMES (CATALÀ / CASTELLÀ)
+    // --------------------------------------------------------------------------
+    const translations = {
+      ca: {
+        status_checking: "Comprovant horari de botiga...",
+        status_open: "🟢 Obert ara a les botigues",
+        status_closed_noon: "🔴 Tancat al migdia (Obrim a les 17:00h)",
+        status_closed_night: "🔴 Tancat actualment (Obrim a les 09:00h)",
+        status_closed_sunday: "🔴 Diumenge tancat (Obrim dilluns a les 09:00h)",
+        schedule_summary: "Dl-Dv: 09:00-14:00 i 17:00-20:30 · Ds: 09:00-14:00",
+        brand_subtitle: "Xarcuters des de 1960 • Barcelona",
+        nav_catalog: "Aparador de Xarcuteria",
+        nav_order: "Encàrrec WhatsApp",
+        nav_stores: "Les 5 Botigues",
+        nav_history: "Tradició des de 1960",
+        header_cta: "Fer Encàrrec",
+        hero_badge: "Xarcuters de confiança des de 1960",
+        hero_title: "El xarcuter de tota la vida, <span>al cor de Gràcia.</span>",
+        hero_desc: "Pernils ibèrics de gla tallats a mà al moment, embotits artesans de pagès, formatges nobles d'origen i l'atenció de proximitat dels nostres xarcuters.",
+        hero_btn_whatsapp: "📱 Encarregar per WhatsApp",
+        hero_btn_stores: "📍 Les nostres 5 botigues",
+        trust_knife: "Pernils ibèrics tallats a ganivet",
+        trust_cheese: "Formatges artesans de pagès",
+        trust_pickup: "Encàrrecs sense cues a botiga",
+        hero_highlight_tag: "Especialitat de la Casa",
+        in_stock: "Tallat al moment",
+        hero_highlight_desc: "Peces pures seleccionades directament dels millors assecadors. Curació de 36 mesos, vetejat noble i aroma inconfusible de gla.",
+        btn_add_to_order: "Afegir a l'Encàrrec",
+        catalog_kicker: "Aparador de Xarcuteria",
+        catalog_title: "El Millor del Nostre Taulell",
+        catalog_subtitle: "Embotits tradicionals de pagès, pernils ibèrics tallats al moment i formatges artesans llestos per recollir a qualsevol de les nostres 5 botigues.",
+        filter_all: "Tot el Catàleg",
+        filter_hams: "Pernils i Embotits",
+        filter_cheeses: "Formatges de Pagès",
+        filter_trays: "Safates de Tast",
+        filter_xmas: "Lots i Paneres",
+        order_kicker: "Comandes Ràpides",
+        order_title: "Construïdor d'Encàrrecs per WhatsApp",
+        order_subtitle: "Prepara la comanda des del mòbil, tria la seu de Barcelona on vols recollir-la i els nostres xarcuters te la tindran tallada i llesta sense fer cues.",
+        order_box_heading: "La teva Comanda Personalitzada",
+        btn_clear_order: "Buidar llista",
+        order_empty_title: "La teva llista d'encàrrec és buida",
+        order_empty_sub: "Fes clic a 'Afegir a l'Encàrrec' a l'aparador superior o escriu directament a sota el que necessitis.",
+        label_notes: "Nota o instruccions del tall (gruix del pernil, quantitats, preferències):",
+        ph_notes: "Ex: Pernil ibèric tallat molt fi, safata d'embotits per a 6 persones per a divendres a la tarda...",
+        label_pickup_store: "Botiga de recollida a Barcelona:",
+        label_pickup_time: "Dia i franja aproximada de recollida:",
+        ph_time: "Ex: Avui a les 18:30h / Dissabte a les 12:00h",
+        label_client_name: "El teu nom:",
+        ph_name: "Nom per identificar la comanda",
+        label_client_phone: "Telèfon de contacte (opcional):",
+        order_estimate_text: "Total estimat orientatiu:",
+        btn_send_whatsapp_action: "Enviar Encàrrec per WhatsApp",
+        order_disclaimer: "El xarcuter revisarà l'encàrrec i et confirmarà l'hora de recollida per WhatsApp sense compromís. Pagament directe a botiga.",
+        stores_kicker: "Presència a Barcelona",
+        stores_title: "Les Nostres 5 Botigues de Barri",
+        stores_subtitle: "Troba el teu establiment de proximitat a Gràcia, Eixample, Ciutat Vella o Sant Andreu de Palomar.",
+        store_address_label: "Adreça física:",
+        store_phone_label: "Telèfon directe:",
+        store_hours_label: "Horari comercial:",
+        btn_how_to_get: "Com arribar (Google Maps)",
+        btn_select_store_pickup: "Triar per recollir comanda",
+        history_kicker: "Patrimoni Artesà",
+        history_title: "Més de 60 anys d'ofici xarcuter a Barcelona",
+        history_p1: "Fundada l'any 1960 a la Vila de Gràcia, la <strong>Xarcuteria Germans Gràcia</strong> ha mantingut viva l'essència de la xarcuteria de barri: selecció dels millors pernils ibèrics de gla, embotits tradicionals elaborats amb cura i el tall a mà que distingeix el bon ofici.",
+        history_p2: "De generació en generació, hem ampliat la presència a punts clau com l'Eixample, Ciutat Vella i Sant Andreu de Palomar, apropant l'autèntica xarcuteria artesana amb la facilitat d'encarregar còmodament per WhatsApp.",
+        pillar_1_title: "Pernils d'alta curació",
+        pillar_1_desc: "Ibèrics purs de gla tallats a mà a ganivet per preservar tot el bouquet i greix infiltrat.",
+        pillar_2_title: "Embotits de poble i proximitat",
+        pillar_2_desc: "Fuet, secallona, bull artesà i botifarres elaborades fidelment segons recepta tradicional.",
+        stamp_label: "Tradició de Barri",
+        footer_sub: "Xarcuters Artesans des de 1960",
+        footer_desc: "Xarxa de botigues tradicionals de Barcelona especialitzades en pernils ibèrics de gla tallats a mà, embotits artesans de pagès i formatges selectes.",
+        footer_stores_title: "Les Nostres 5 Seus",
+        footer_specialties_title: "Especialitats de Xarcuteria",
+        footer_contact_title: "Atenció Directa",
+        footer_heritage_note: "Comerç i Patrimoni Gastronòmic de Barcelona",
+        quick_call: "Trucar",
+        quick_whatsapp: "WhatsApp",
+        quick_maps: "Botigues",
+        toast_added: "Producte afegit a l'encàrrec!"
+      },
+      es: {
+        status_checking: "Comprobando horario de tienda...",
+        status_open: "🟢 Abierto ahora en las tiendas",
+        status_closed_noon: "🔴 Cerrado a mediodía (Abrimos a las 17:00h)",
+        status_closed_night: "🔴 Cerrado actualmente (Abrimos a las 09:00h)",
+        status_closed_sunday: "🔴 Domingo cerrado (Abrimos lunes a las 09:00h)",
+        schedule_summary: "L-V: 09:00-14:00 y 17:00-20:30 · S: 09:00-14:00",
+        brand_subtitle: "Charcuteros desde 1960 • Barcelona",
+        nav_catalog: "Escaparate de Charcutería",
+        nav_order: "Pedido WhatsApp",
+        nav_stores: "Las 5 Tiendas",
+        nav_history: "Tradición desde 1960",
+        header_cta: "Hacer Pedido",
+        hero_badge: "Charcuteros de confianza desde 1960",
+        hero_title: "La charcutería de toda la vida, <span>en el corazón de Gràcia.</span>",
+        hero_desc: "Jamones ibéricos de bellota cortados a mano al momento, embutidos artesanos de pagès, quesos nobles de origen y la atención experta y cercana de nuestros charcuteros.",
+        hero_btn_whatsapp: "📱 Encargar por WhatsApp",
+        hero_btn_stores: "📍 Nuestras 5 tiendas",
+        trust_knife: "Jamones ibéricos cortados a cuchillo",
+        trust_cheese: "Quesos artesanos de pueblo",
+        trust_pickup: "Encargos sin colas en tienda",
+        hero_highlight_tag: "Especialidad de la Casa",
+        in_stock: "Cortado al momento",
+        hero_highlight_desc: "Piezas puras seleccionadas directamente de los mejores secaderos. Curación de 36 meses, veteado noble y aroma inconfundible a bellota.",
+        btn_add_to_order: "Añadir al Pedido",
+        catalog_kicker: "Escaparate de Charcutería",
+        catalog_title: "Lo Mejor de Nuestro Mostrador",
+        catalog_subtitle: "Embutidos tradicionales de pueblo, jamones ibéricos cortados al momento y quesos artesanos listos para recoger en cualquiera de nuestras 5 tiendas.",
+        filter_all: "Todo el Catálogo",
+        filter_hams: "Jamones y Embutidos",
+        filter_cheeses: "Quesos Artesanos",
+        filter_trays: "Tablas y Degustación",
+        filter_xmas: "Lotes y Cestas",
+        order_kicker: "Pedidos Rápidos",
+        order_title: "Constructor de Pedidos por WhatsApp",
+        order_subtitle: "Prepara tu pedido desde el móvil, elige la tienda de Barcelona donde recogerlo y nuestros charcuteros lo tendrán cortado y listo sin hacer colas.",
+        order_box_heading: "Tu Pedido Personalizado",
+        btn_clear_order: "Vaciar lista",
+        order_empty_title: "Tu lista de pedido está vacía",
+        order_empty_sub: "Haz clic en 'Añadir al Pedido' en el escaparate superior o escribe directamente abajo lo que necesites.",
+        label_notes: "Nota o instrucciones del corte (grosor del jamón, cantidades, preferencias):",
+        ph_notes: "Ej: Jamón ibérico cortado muy fino, tabla de embutidos para 6 personas para el viernes por la tarde...",
+        label_pickup_store: "Tienda de recogida en Barcelona:",
+        label_pickup_time: "Día y franja aproximada de recogida:",
+        ph_time: "Ej: Hoy a las 18:30h / Sábado a las 12:00h",
+        label_client_name: "Tu nombre:",
+        ph_name: "Nombre para identificar el pedido",
+        label_client_phone: "Teléfono de contacto (opcional):",
+        order_estimate_text: "Total estimado orientativo:",
+        btn_send_whatsapp_action: "Enviar Pedido por WhatsApp",
+        order_disclaimer: "El charcutero revisará el encargo y te confirmará la hora exacta de recogida por WhatsApp sin compromiso. Pago directo en tienda.",
+        stores_kicker: "Presencia en Barcelona",
+        stores_title: "Nuestras 5 Tiendas de Barrio",
+        stores_subtitle: "Encuentra tu establecimiento de proximidad en Gràcia, Eixample, Ciutat Vella o Sant Andreu de Palomar.",
+        store_address_label: "Dirección física:",
+        store_phone_label: "Teléfono directo:",
+        store_hours_label: "Horario comercial:",
+        btn_how_to_get: "Cómo llegar (Google Maps)",
+        btn_select_store_pickup: "Elegir para recoger pedido",
+        history_kicker: "Patrimonio Artesano",
+        history_title: "Más de 60 años de oficio charcutero en Barcelona",
+        history_p1: "Fundada en 1960 en la Vila de Gràcia, <strong>Xarcuteria Germans Gràcia</strong> ha mantenido viva la esencia del comercio de toda la vida: jamones ibéricos de bellota seleccionados en origen, embutidos tradicionales y el corte a mano que distingue el buen oficio.",
+        history_p2: "De generación en generación, hemos extendido nuestra presencia a puntos clave como Eixample, Ciutat Vella y Sant Andreu de Palomar, acercando la auténtica charcutería de barrio con la comodidad de pedir por WhatsApp.",
+        pillar_1_title: "Jamones de alta curación",
+        pillar_1_desc: "Ibéricos puros de bellota cortados a cuchillo para preservar todo el bouquet y grasa infiltrada.",
+        pillar_2_title: "Embutidos tradicionales",
+        pillar_2_desc: "Fuet, secallona, bull artesano y butifarras elaboradas fielmente según receta histórica.",
+        stamp_label: "Tradición de Barrio",
+        footer_sub: "Charcuteros Artesanos desde 1960",
+        footer_desc: "Red de tiendas tradicionales de Barcelona especializadas en jamones ibéricos de bellota cortados a mano, embutidos artesanos y quesos selectos.",
+        footer_stores_title: "Nuestras 5 Sedes",
+        footer_specialties_title: "Especialidades de Charcutería",
+        footer_contact_title: "Atención Directa",
+        footer_heritage_note: "Comercio y Patrimonio Gastronómico de Barcelona",
+        quick_call: "Llamar",
+        quick_whatsapp: "WhatsApp",
+        quick_maps: "Tiendas",
+        toast_added: "¡Producto añadido al pedido!"
+      }
+    };
+
+    let currentLang = 'ca';
+    let currentFilter = 'all';
+    let currentStoreIndex = 0;
+    let orderCart = []; // [{ id, qty, product }]
+
+    // --------------------------------------------------------------------------
+    // 1. COMPROVACIÓ D'ESTAT OPERATIU DINÀMIC (HORA DE BARCELONA)
+    // Dilluns a Divendres: 09:00–14:00 i 17:00–20:30
+    // Dissabte: 09:00–14:00
+    // Diumenge: Tancat
+    // --------------------------------------------------------------------------
+    function checkStoreStatus() {
+      const now = new Date();
+      const options = { timeZone: 'Europe/Madrid' };
+      const hoursFormatter = new Intl.DateTimeFormat('en-US', { ...options, hour: 'numeric', minute: 'numeric', hour12: false });
+      const parts = hoursFormatter.formatToParts(now);
+      let hour = 10;
+      let minute = 0;
+      parts.forEach(p => {
+        if (p.type === 'hour') hour = parseInt(p.value, 10);
+        if (p.type === 'minute') minute = parseInt(p.value, 10);
+      });
+
+      const dayOfWeek = now.getDay();
+      const currentMinutes = hour * 60 + minute;
+      const morningOpen = 9 * 60;          // 09:00
+      const morningClose = 14 * 60;        // 14:00
+      const afternoonOpen = 17 * 60;       // 17:00
+      const afternoonClose = 20 * 60 + 30; // 20:30
+
+      const badgeElem = document.getElementById('store-status-badge');
+      const textElem = document.getElementById('store-status-text');
+
+      if (!badgeElem || !textElem) return;
+
+      let isOpen = false;
+      let statusKey = 'status_closed_night';
+
+      if (dayOfWeek === 0) {
+        isOpen = false;
+        statusKey = 'status_closed_sunday';
+      } else if (dayOfWeek === 6) {
+        if (currentMinutes >= morningOpen && currentMinutes < morningClose) {
+          isOpen = true;
+          statusKey = 'status_open';
+        } else {
+          isOpen = false;
+          statusKey = 'status_closed_night';
+        }
+      } else {
+        if (currentMinutes >= morningOpen && currentMinutes < morningClose) {
+          isOpen = true;
+          statusKey = 'status_open';
+        } else if (currentMinutes >= morningClose && currentMinutes < afternoonOpen) {
+          isOpen = false;
+          statusKey = 'status_closed_noon';
+        } else if (currentMinutes >= afternoonOpen && currentMinutes < afternoonClose) {
+          isOpen = true;
+          statusKey = 'status_open';
+        } else {
+          isOpen = false;
+          statusKey = 'status_closed_night';
+        }
+      }
+
+      badgeElem.className = 'status-badge ' + (isOpen ? 'open' : 'closed');
+      textElem.textContent = translations[currentLang][statusKey];
+      textElem.setAttribute('data-i18n', statusKey);
+    }
+
+    // --------------------------------------------------------------------------
+    // 2. SISTEMA DE TRADUCCIÓ (i18n)
+    // --------------------------------------------------------------------------
+    function switchLanguage(lang) {
+      if (!translations[lang]) return;
+      currentLang = lang;
+
+      document.getElementById('lang-cat-btn').classList.toggle('active', lang === 'ca');
+      document.getElementById('lang-es-btn').classList.toggle('active', lang === 'es');
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+
+      document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+        const key = el.getAttribute('data-i18n-ph');
+        if (translations[lang][key]) {
+          el.setAttribute('placeholder', translations[lang][key]);
+        }
+      });
+
+      checkStoreStatus();
+      renderCatalog();
+      renderOrderItems();
+      updateStoreDetailView(currentStoreIndex);
+    }
+
+    // --------------------------------------------------------------------------
+    // 3. RENDER I FILTRATGE DEL CATÀLEG
+    // --------------------------------------------------------------------------
+    function filterCatalog(category, btnElement) {
+      currentFilter = category;
+
+      if (btnElement) {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btnElement.classList.add('active');
+      } else {
+        document.querySelectorAll('.filter-btn').forEach(b => {
+          b.classList.toggle('active', b.getAttribute('data-filter') === category);
+        });
+      }
+
+      renderCatalog();
+    }
+
+    function renderCatalog() {
+      const container = document.getElementById('productsGrid');
+      if (!container) return;
+
+      const filtered = currentFilter === 'all'
+        ? PRODUCTS
+        : PRODUCTS.filter(p => p.category === currentFilter);
+
+      container.innerHTML = filtered.map(prod => {
+        const title = currentLang === 'es' ? prod.title_es : prod.title_ca;
+        const desc = currentLang === 'es' ? prod.desc_es : prod.desc_ca;
+        const badge = currentLang === 'es' ? prod.badge_es : prod.badge_ca;
+        const unit = currentLang === 'es' ? prod.unit_es : prod.unit_ca;
+        const priceFormatted = prod.price.toFixed(2).replace('.', ',') + ' €';
+
+        return `
+          <article class="product-card" data-product-id="${prod.id}">
+            <div class="product-img-wrap">
+              <img src="${prod.img}"
+                   alt="${title}"
+                   referrerpolicy="no-referrer"
+                   loading="lazy"
+                   onerror="this.onerror=null; this.parentElement.classList.add('img-fallback'); this.parentElement.innerHTML='<i class=\\'fa-solid ${prod.fallbackIcon}\\'></i><span>${title}</span>';">
+              <span class="product-category-tag">${prod.category}</span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">${title}</h3>
+              <p class="product-desc">${desc}</p>
+              <div class="product-footer">
+                <div>
+                  <span class="product-price">${priceFormatted}</span>
+                  <span class="product-price-sub">${unit}</span>
+                </div>
+                <button class="btn-add-order" onclick="addToOrder(${prod.id})">
+                  <i class="fa-solid fa-plus"></i>
+                  <span>${translations[currentLang].btn_add_to_order}</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+
+
+    // --------------------------------------------------------------------------
+    // 4. CONSTRUCTOR D'ENCÀRREC I CARRET
+    // --------------------------------------------------------------------------
+    function addToOrder(productId) {
+      const product = PRODUCTS.find(p => p.id === productId);
+      if (!product) return;
+
+      const existing = orderCart.find(item => item.id === productId);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        orderCart.push({
+          id: productId,
+          qty: 1,
+          product: product
+        });
+      }
+
+      renderOrderItems();
+      showToast(translations[currentLang].toast_added);
+    }
+
+    function updateItemQty(productId, delta) {
+      const item = orderCart.find(i => i.id === productId);
+      if (!item) return;
+
+      item.qty += delta;
+      if (item.qty <= 0) {
+        orderCart = orderCart.filter(i => i.id !== productId);
+      }
+      renderOrderItems();
+    }
+
+    function removeItemFromOrder(productId) {
+      orderCart = orderCart.filter(i => i.id !== productId);
+      renderOrderItems();
+    }
+
+    function clearAllOrderItems() {
+      orderCart = [];
+      renderOrderItems();
+    }
+
+    function renderOrderItems() {
+      const container = document.getElementById('orderItemsContainer');
+      const badgeCount = document.getElementById('cartCountBadge');
+      const totalElem = document.getElementById('orderTotalSum');
+
+      const totalUnits = orderCart.reduce((sum, i) => sum + i.qty, 0);
+      if (badgeCount) badgeCount.textContent = totalUnits;
+
+      const totalAmount = orderCart.reduce((sum, i) => sum + (i.qty * i.product.price), 0);
+      if (totalElem) {
+        totalElem.textContent = totalAmount.toFixed(2).replace('.', ',') + ' €';
+      }
+
+      if (!container) return;
+
+      if (orderCart.length === 0) {
+        container.innerHTML = `
+          <div class="order-empty-state">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <strong>${translations[currentLang].order_empty_title}</strong>
+            <p style="margin-top: 0.35rem; font-size: 0.85rem;">${translations[currentLang].order_empty_sub}</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = orderCart.map(item => {
+        const title = currentLang === 'es' ? item.product.title_es : item.product.title_ca;
+        const subtotal = (item.qty * item.product.price).toFixed(2).replace('.', ',');
+        return `
+          <div class="order-item-row">
+            <div class="order-item-info">
+              <div class="order-item-name">${title}</div>
+              <div class="order-item-unit-price">${item.product.price.toFixed(2).replace('.', ',')} € / un. · Subtotal: ${subtotal} €</div>
+            </div>
+            <div class="order-item-controls">
+              <button type="button" class="btn-qty" onclick="updateItemQty(${item.id}, -1)" aria-label="Restar quantitat">-</button>
+              <span class="order-item-qty">${item.qty}</span>
+              <button type="button" class="btn-qty" onclick="updateItemQty(${item.id}, 1)" aria-label="Sumar quantitat">+</button>
+              <button type="button" class="btn-remove-item" onclick="removeItemFromOrder(${item.id})" title="Eliminar"><i class="fa-solid fa-trash"></i></button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function scrollToOrder() {
+      const target = document.getElementById('comanda');
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // --------------------------------------------------------------------------
+    // 5. ENVIAMENT D'ENCÀRREC VIA WHATSAPP API (wa.me)
+    // --------------------------------------------------------------------------
+    function submitWhatsAppOrder() {
+      const notes = document.getElementById('customOrderNotes').value.trim();
+      const storeVal = document.getElementById('storeSelect').value;
+      const pickupTime = document.getElementById('pickupTime').value.trim();
+      const name = document.getElementById('customerName').value.trim();
+      const phone = document.getElementById('customerPhone').value.trim();
+
+      const selectedStore = STORES_DATA.find(s => s.id === parseInt(storeVal, 10)) || STORES_DATA[0];
+
+      if (orderCart.length === 0 && !notes) {
+        alert(currentLang === 'es'
+          ? "Por favor, añade al menos un producto de charcutería a la lista o escribe una nota con tu encargo."
+          : "Si us plau, afegeix com a mínim un producte de xarcuteria a la llista o escriu una nota amb el teu encàrrec.");
+        return;
+      }
+
+      let msg = "";
+      if (currentLang === 'es') {
+        msg += "👋 Hola Xarcuteria Germans Gràcia!\n";
+        msg += "Quisiera realizar el siguiente encargo de charcutería para recoger en tienda:\n\n";
+
+        if (orderCart.length > 0) {
+          msg += "🛒 PRODUCTOS:\n";
+          orderCart.forEach(item => {
+            const title = item.product.title_es;
+            msg += `• ${item.qty}x ${title} (${item.product.price.toFixed(2)}€/un)\n`;
+          });
+          const totalAmount = orderCart.reduce((sum, i) => sum + (i.qty * i.product.price), 0);
+          msg += `Total estimado: ${totalAmount.toFixed(2)}€\n\n`;
+        }
+
+        if (notes) {
+          msg += `📝 NOTAS Y DETALLES DEL CORTE:\n${notes}\n\n`;
+        }
+
+        msg += `📍 TIENDA DE RECOGIDA:\n${selectedStore.district} — ${selectedStore.name} (${selectedStore.address})\n\n`;
+        msg += `📅 DÍA Y HORA PREVISTA:\n${pickupTime || 'A concretar'}\n\n`;
+        msg += `👤 CLIENTE:\n${name}${phone ? ' · Tel: ' + phone : ''}\n\n`;
+        msg += "Muchas gracias!";
+      } else {
+        msg += "👋 Hola Xarcuteria Germans Gràcia!\n";
+        msg += "Voldria fer el següent encàrrec de xarcuteria per recollir a botiga:\n\n";
+
+        if (orderCart.length > 0) {
+          msg += "🛒 PRODUCTES:\n";
+          orderCart.forEach(item => {
+            const title = item.product.title_ca;
+            msg += `• ${item.qty}x ${title} (${item.product.price.toFixed(2)}€/un)\n`;
+          });
+          const totalAmount = orderCart.reduce((sum, i) => sum + (i.qty * i.product.price), 0);
+          msg += `Total estimat: ${totalAmount.toFixed(2)}€\n\n`;
+        }
+
+        if (notes) {
+          msg += `📝 NOTES I DETALLS DEL TALL:\n${notes}\n\n`;
+        }
+
+        msg += `📍 BOTIGA DE RECOLLIDA:\n${selectedStore.district} — ${selectedStore.name} (${selectedStore.address})\n\n`;
+        msg += `📅 DIA I HORA PREVISTA:\n${pickupTime || 'A concretar'}\n\n`;
+        msg += `👤 CLIENT:\n${name}${phone ? ' · Tel: ' + phone : ''}\n\n`;
+        msg += "Moltes gràcies!";
+      }
+
+      const encodedMsg = encodeURIComponent(msg);
+      const waUrl = `https://wa.me/34933473802?text=${encodedMsg}`;
+
+      window.open(waUrl, '_blank');
+    }
+
+    // --------------------------------------------------------------------------
+    // 6. GESTIÓ DE BOTIGUES (SEDES)
+    // --------------------------------------------------------------------------
+    function activateStoreTab(index, btnElement) {
+      currentStoreIndex = index;
+
+      const allTabs = document.querySelectorAll('.store-tab-btn');
+      allTabs.forEach((tab, i) => {
+        tab.classList.toggle('active', i === index);
+      });
+
+      updateStoreDetailView(index);
+    }
+
+    function updateStoreDetailView(index) {
+      const store = STORES_DATA[index] || STORES_DATA[0];
+
+      document.getElementById('activeStoreDistrict').textContent = currentLang === 'es' ? store.district_es : store.district;
+      document.getElementById('activeStoreName').textContent = store.name;
+      document.getElementById('activeStoreDesc').textContent = currentLang === 'es' ? store.desc_es : store.desc_ca;
+      document.getElementById('activeStoreAddress').textContent = store.address;
+
+      const phoneLink = document.getElementById('activeStorePhoneLink');
+      phoneLink.textContent = store.phone;
+      phoneLink.href = `tel:${store.phoneRaw}`;
+
+      document.getElementById('activeStoreHours').innerHTML = (currentLang === 'es' ? store.hours_es : store.hours_ca).replace('\n', '<br>');
+      document.getElementById('activeStoreMapsBtn').href = store.mapsUrl;
+      document.getElementById('activeStoreIframe').src = store.iframeSrc;
+    }
+
+    function selectStoreForOrder() {
+      const store = STORES_DATA[currentStoreIndex];
+      const select = document.getElementById('storeSelect');
+      if (select && store) {
+        select.value = store.id.toString();
+      }
+      scrollToOrder();
+      showToast(currentLang === 'es'
+        ? `Tienda seleccionada: ${store.name}`
+        : `Botiga seleccionada: ${store.name}`);
+    }
+
+    // --------------------------------------------------------------------------
+    // 7. TOAST I MENÚ MÒBIL
+    // --------------------------------------------------------------------------
+    let toastTimeout;
+    function showToast(message) {
+      const toast = document.getElementById('toastNotice');
+      const text = document.getElementById('toastNoticeText');
+      if (!toast || !text) return;
+
+      text.textContent = message;
+      toast.classList.add('show');
+
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    function toggleMobileMenu() {
+      const nav = document.getElementById('mainNav');
+      if (nav) nav.classList.toggle('mobile-active');
+    }
+
+    document.querySelectorAll('.main-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        const nav = document.getElementById('mainNav');
+        if (nav) nav.classList.remove('mobile-active');
+      });
+    });
+
+    // --------------------------------------------------------------------------
+    // 8. FINESTRES MODALS LEGALS
+    // --------------------------------------------------------------------------
+    const legalContents = {
+      avis: {
+        title_ca: "Avís Legal",
+        title_es: "Aviso Legal",
+        body_ca: `
+          <p><strong>GERMANS GRACIA XARCUTERS S.L.</strong>, amb CIF B65932238 i seu a Barcelona, posa a disposició dels usuaris aquest lloc web amb finalitats informatives i de facilitació de comandes de comerç de proximitat.</p>
+          <p>El domini germansgracia.com i tots els elements identificatius de la marca estan protegits per la legislació de propietat industrial i intel·lectual. Queda prohibida la reproducció no autoritzada.</p>
+          <p>Per a qualsevol consulta institucional o comercial, podeu adreçar-vos a <em>pedidos@germansgracia.com</em> o al telèfon central <em>+34 933 47 38 02</em>.</p>
+        `,
+        body_es: `
+          <p><strong>GERMANS GRACIA XARCUTERS S.L.</strong>, con CIF B65932238 y sede en Barcelona, pone a disposición de los usuarios este sitio web con fines informativos y de gestión de encargos en comercio de proximidad.</p>
+          <p>El dominio germansgracia.com y todos los elementos identificativos de la marca están protegidos por la legislación de propiedad industrial e intelectual. Queda prohibida su reproducción no autorizada.</p>
+          <p>Para cualquier consulta institucional o comercial, puede dirigirse a <em>pedidos@germansgracia.com</em> o al teléfono central <em>+34 933 47 38 02</em>.</p>
+        `
+      },
+      privacitat: {
+        title_ca: "Política de Privacitat",
+        title_es: "Política de Privacidad",
+        body_ca: `
+          <p>D'acord amb el Reglament General de Protecció de Dades (RGPD), us informem que les dades facilitades en el formulari d'encàrrec s'utilitzen exclusivament per generar el text del missatge de WhatsApp que el mateix usuari transmet al nostre servei d'atenció al client.</p>
+          <p>Aquesta aplicació web no ven ni cedeix dades a tercers amb finalitats publicitàries.</p>
+        `,
+        body_es: `
+          <p>De acuerdo con el Reglamento General de Protección de Datos (RGPD), le informamos que los datos facilitados en el formulario de pedido se utilizan exclusivamente para estructurar el mensaje de WhatsApp que el propio usuario envía a nuestro servicio de atención al cliente.</p>
+          <p>Esta aplicación web no comercializa ni cede datos a terceros con fines publicitarios.</p>
+        `
+      },
+      cookies: {
+        title_ca: "Política de Cookies",
+        title_es: "Política de Cookies",
+        body_ca: `
+          <p>Aquest lloc web utilitza exclusivament emmagatzematge local tècnic (localStorage) per recordar les vostres preferències d'idioma (Català / Castellà) i la llista de comanda en curs.</p>
+          <p>No s'utilitzen cookies invasives de seguiment o perfilat comercial.</p>
+        `,
+        body_es: `
+          <p>Este sitio web utiliza exclusivamente almacenamiento local técnico (localStorage) para recordar sus preferencias de idioma (Catalán / Español) y la lista de pedido en curso.</p>
+          <p>No se utilizan cookies invasivas de seguimiento o elaboración de perfiles comerciales.</p>
+        `
+      }
+    };
+
+    function openLegalModal(type) {
+      const modal = document.getElementById('legalModalOverlay');
+      const title = document.getElementById('modalTitle');
+      const body = document.getElementById('modalBody');
+      const content = legalContents[type];
+
+      if (!content || !modal) return;
+
+      title.textContent = currentLang === 'es' ? content.title_es : content.title_ca;
+      body.innerHTML = currentLang === 'es' ? content.body_es : content.body_ca;
+
+      modal.classList.add('active');
+    }
+
+    function closeLegalModal(event) {
+      const modal = document.getElementById('legalModalOverlay');
+      if (modal) modal.classList.remove('active');
+    }
+
+    // --------------------------------------------------------------------------
+    // INICIALITZACIÓ EN CARREGAR EL DOM
+    // --------------------------------------------------------------------------
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Verificar horari en temps real (fus horari de Barcelona)
+      checkStoreStatus();
+      setInterval(checkStoreStatus, 60000);
+
+      // 2. Renderitzar aparador inicial
+      renderCatalog();
+
+      // 3. Renderitzar botiga activa per defecte (Astúries, 9)
+      updateStoreDetailView(0);
+
+      // 4. Renderitzar carret buit
+      renderOrderItems();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "Xarcuteria Germans Gràcia - Des de 1960",
+  "description": "Web oficial i aparador digital de la Xarcuteria Germans Gràcia a Barcelona. Pernils ibèrics tallats a mà, formatges artesans, safates de càtering i encàrrecs per WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
